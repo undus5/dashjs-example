@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dash.js Practice</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="main">
+
+<div class="video-container">
+    <div class="video-wrapper">
+        <video class="video"></video>
+    </div>
+    <div class="controls-container">
+        <div class="seekbar-container">
+            <div class="seekbar-wrapper">
+                <div class="focus-wrapper">
+                    <input class="focus-input" type="range">
+                </div>
+                <div class="seekbar-track"></div>
+                <div class="seekbar-buffer"></div>
+                <div class="seekbar-thumb"></div>
+                <div class="seekbar-cursor hidden"></div>
+                <div class="thumbnail-container hidden">
+                    <div class="thumbnail-label"></div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar-container">
+            <div class="toolbar-left">
+                <div class="play-button control-button">
+                    <span class="fa-solid fa-play"></span>
+                </div>
+                <div class="mute-button control-button">
+                    <span class="fa-solid fa-volume-high"></span>
+                </div>
+                <div class="volume-container control-button">
+                    <input class="volume-slider" type="range" value="1" min="0" max="1" step=".01">
+                </div>
+                <div class="control-button">
+                    <span class="video-time">00:00</span>
+                </div>
+                <span class="time-separator">/</span>
+                <div class="control-button">
+                    <span class="duration">00:00</span>
+                </div>
+            </div>
+            <div class="toolbar-right">
+                <!-- TODO -->
+                <!--
+                <div class="caption-button control-button">
+                    <span class="fa-solid fa-closed-captioning"></span>
+                </div>
+                <div class="bitrate-button control-button">
+                    <span class="fa-solid fa-bars-staggered"></span>
+                </div>
+                -->
+                <div class="fullscreen-button control-button">
+                    <span class="fa-solid fa-expand"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="dash.all.min.js"></script>
+<script src="control.js"></script>
+<script>
+    const MPDURL = "https://dash.akamaized.net/akamai/bbb_30fps/bbb_with_multiple_tiled_thumbnails.mpd";
+    DASHControl(MPDURL);
+</script>
+
+</body>
+</html>
