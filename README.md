@@ -1,4 +1,4 @@
-# dash.js player practice
+# dash.js Example
 
 DASH video player implementation based on dash.js
 
